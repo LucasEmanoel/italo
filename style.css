@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 ul {
   list-style: none;
 }
@@ -15,15 +16,25 @@ img {
   width: 100%;
   height: auto;
 }
+.fundo img {
+  position: fixed;
+
+  z-index: -1;
+  opacity: 0.05;
+
+  top: -50rem;
+  height: 150rem;
+  width: 140rem;
+}
 
 /*================VARIABLES================*/
 :root {
   --header-height: 4.5rem;
 
   /* colors */
-  --hue: 160;
+  --hue: 214;
   /* HSL color mode */
-  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color: hsl(var(--hue) 67% 45%);
   --base-color-second: hsl(var(--hue) 65% 88%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
@@ -130,6 +141,14 @@ body {
   left: 0;
   z-index: 100;
   background-color: var(--body-color);
+}
+#header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .logo img {
+  height: 4.3rem;
 }
 
 #header.scroll {
@@ -254,6 +273,7 @@ nav.show div.icon-close {
 }
 
 #home .image {
+  order: 0;
   position: relative;
 }
 
@@ -264,13 +284,12 @@ nav.show div.icon-close {
   background: var(--base-color-second);
   position: absolute;
   top: -16.8%;
-  left: 16.7%;
+  left: -16.7%;
   z-index: 0;
 }
 
 #home .image img {
   position: relative;
-  right: 2.93rem;
 }
 
 #home .image img,
@@ -282,6 +301,14 @@ nav.show div.icon-close {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home .text .button {
+  margin-top: 1rem;
 }
 
 #about .text h1 {
@@ -293,9 +320,6 @@ nav.show div.icon-close {
   max-width: 100%;
 }
 /*================ABOUT================*/
-#about {
-  background: white;
-}
 
 #about .container {
   margin: 0;
@@ -330,6 +354,9 @@ nav.show div.icon-close {
   margin-right: 1.5rem;
 }
 /*================SERVICES================*/
+#services .subtitle {
+  margin: 1rem 0;
+}
 
 .cards.grid {
   gap: 1.5rem;
@@ -341,8 +368,13 @@ nav.show div.icon-close {
   border-bottom: 0.25rem solid var(--base-color);
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
+  background: white;
 }
 
+.card.home-card {
+  border: none;
+  border-radius: 0.5rem;
+}
 .card i {
   display: block;
   margin-bottom: 1.5rem;
@@ -355,9 +387,7 @@ nav.show div.icon-close {
   margin-bottom: 0.75rem;
 }
 /*================TESTIMONIALS================*/
-#testimonials {
-  background: white;
-}
+
 #testimonials .container {
   margin-left: 0;
   margin-right: 0;
@@ -415,7 +445,7 @@ nav.show div.icon-close {
   gap: 4rem;
 }
 #cotact .text p {
-  margin-bottom: 2rem;
+  margin-bottom: rem;
 }
 
 #contact .button i,
@@ -470,7 +500,7 @@ footer .social a:hover {
 }
 /*================BACK-TO-TOP================*/
 
-.back-to-top {
+/* .back-to-top {
   background: var(--base-color);
   color: var(--text-color-light);
 
@@ -489,12 +519,31 @@ footer .social a:hover {
 
   transition: 0.3s;
   transform: translateY(100%);
-}
+} */
 
-.back-to-top.show {
+/* .back-to-top.show {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
+} */
+/* MODAL */
+.modal-wrapper.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+
+  background: rgba(4, 9, 17, 0.5);
+
+  visibility: hidden;
+  opacity: 0;
 }
 
 /*Responsivo*/
@@ -554,13 +603,13 @@ footer .social a:hover {
     margin: 0 auto;
   }
   #home .image {
-    order: 1;
+    /* order: 0; */
   }
 
   #home .text {
-    order: 0;
+    /* order: 1; */
     max-width: 24rem;
-    text-align: left;
+    text-align: center;
   }
   /*ABOUT*/
   #about .container {

@@ -1,8 +1,7 @@
 /* abre e fehca menu quando clicar*/
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
-
-console.log(toggle)
+const message = ''
 
 for (const element of toggle) {
   element.addEventListener('click', function () {
@@ -21,7 +20,7 @@ for (const link of links) {
 }
 
 /*mudar header quando der scroll */
-const header = document.querySelector('#header')
+const header = document.querySelector('.content #header')
 const navHeight = header.offsetHeight
 
 function changeHeaderWhenScroll() {
@@ -72,14 +71,14 @@ scrollReveal.reveal(
 )
 
 /**Voltar para o topo */
-const backToTopButton = document.querySelector('.back-to-top ')
-function backToTop() {
-  if (this.window.scrollY >= 560) {
-    backToTopButton.classList.add('show')
-  } else {
-    backToTopButton.classList.remove('show')
-  }
-}
+// const backToTopButton = document.querySelector('.back-to-top ')
+// function backToTop() {
+//   if (this.window.scrollY >= 560) {
+//     backToTopButton.classList.add('show')
+//   } else {
+//     backToTopButton.classList.remove('show')
+//   }
+// }
 
 /**Menu Ativo Conforme Section no View */
 const sections = document.querySelectorAll('main section[id]')
@@ -88,7 +87,6 @@ function activateMenuAtCurrentSection() {
   const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
   for (const section of sections) {
-    console.log(section.id)
     const sectionTop = section.offsetTop
     const sectionHeight = section.offsetHeight
     const sectionId = section.id
@@ -111,6 +109,6 @@ function activateMenuAtCurrentSection() {
 /**When Scroll */
 window.addEventListener('scroll', function () {
   changeHeaderWhenScroll()
-  backToTop()
+  //backToTop()
   activateMenuAtCurrentSection()
 })
