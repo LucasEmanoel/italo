@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
+    <title>Ìtalo Azevedo - Engenheiro Civil</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
     <!-- ICONS 1:13 min aula - 002-->
     <link rel="stylesheet" href="assets/icons/style.css" />
     <!-- SWIPER-->
@@ -26,6 +26,29 @@
     />
   </head>
   <body>
+    <!-- Modal Orçamento -->
+    <div class="modal-wrapper">
+      <div class="modal swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <form action="">
+              <div>
+                <input type="checkbox" name="" id="" />
+                <label for=""></label>
+              </div>
+              <div>
+                <input type="checkbox" name="" id="" />
+                <label for=""></label>
+              </div>
+              <div>
+                <button type="submit">Solicitar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- background com imagem -->
     <div class="fundo">
       <img src="images/logo.png" alt="Plano de Fundo" srcset="" />
     </div>
@@ -55,18 +78,16 @@
         <section class="section" id="home">
           <div class="container grid">
             <div class="image">
-              <img
-                src="https://images.unsplash.com/photo-1612534526511-dd27833d6e50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                alt="gamer"
-              />
+              <img src="images/img4.jpeg" alt="gamer" />
             </div>
             <div class="text card home-card">
               <h2 class="title">O projeto da sua casa, a um clique!</h2>
               <p>
-                Um dos melhores profissionais do agreste, especializado em []
+                Um dos melhores profissionais do agreste, especializado em
+                renderização 3D
               </p>
 
-              <a class="button" href="">Agendar um horario</a>
+              <a class="button" href="">Fazer Orçamento</a>
             </div>
           </div>
         </section>
@@ -75,18 +96,13 @@
         <section class="section" id="about">
           <div class="container grid">
             <div class="image">
-              <img
-                src="https://images.unsplash.com/photo-1640020580603-e7beafd75d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80"
-                alt="mulher linda"
-              />
+              <img src="images/img3.jpeg" alt="italo engenheiro" />
             </div>
             <div class="text">
               <h2 class="title"></h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                illum error natus iste maxime exercitationem laudantium, dolor
-                suscipit tempora reprehenderit. Minus, ut! Delectus nemo, quas
-                dolores ratione cum ullam dolorem.
+                Olá, meu nome ítalo azevedo, sou engenheiro formado pela
+                AESGA(Autarquia do Ensino Superior de Garanhuns), .
               </p>
               <br />
               <p>
@@ -112,18 +128,24 @@
             <header>
               <h2 class="title">Serviços</h2>
               <p class="subtitle">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                officiis sapiente, nulla deserunt quibusdam distinctio dolores
-                dicta hic molestiae obcaecati perferendis, placeat maiores
-                maxime animi totam qui quae dolor debitis.
-                <strong> Ítalo Azevedo </strong>
+                Com uma vasta experiencia de mercado,
+                <strong> Ítalo Azevedo </strong> ao longo dos ultimos anos,
+                conta com um portifolio rico de atividades aplicadas ao setor de
+                engenharia pública e privada,<strong>
+                  clique e acesse todos serviços abaixo.</strong
+                >
               </p>
-              <a class="button" href="#"> Todos serviços</a>
+              <a class="button" href="/servicos.html"> Todos serviços</a>
             </header>
             <div class="cards grid">
               <div class="card">
-                <i class="icon-woman-hair"></i>
-                <h3 class="title">Terapia Capilar</h3>
+                <i>
+                  <img
+                    src="/images/engineers.png"
+                    alt="Elaboração de projetos"
+                    srcset=""
+                /></i>
+                <h3 class="title">Elaboração de Projetos</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Obcaecati unde cumque quidem reprehenderit earum magnam odio
@@ -131,9 +153,14 @@
                   alias qui, illum nesciunt adipisci!
                 </p>
               </div>
-              <div class="card">
-                <i class="icon-trim"></i>
-                <h3 class="title">Corte</h3>
+              <div class="card emphasis">
+                <i>
+                  <img
+                    src="/images/file.png"
+                    alt="Regularização de imoveis"
+                    srcset=""
+                /></i>
+                <h3 class="title">Regularização de Imóveis</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Provident quia architecto debitis temporibus. Voluptates iusto
@@ -142,8 +169,13 @@
                 </p>
               </div>
               <div class="card">
-                <i class="icon-cosmetic"></i>
-                <h3 class="title">Tratamentos</h3>
+                <i>
+                  <img
+                    src="/images/engrenagem.png"
+                    alt="Acompanhamento de obras"
+                    srcset=""
+                /></i>
+                <h3 class="title">Acompanhamento de Obras</h3>
                 <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Cupiditate excepturi cum eveniet nulla aliquid architecto
@@ -160,7 +192,7 @@
         <section class="section" id="testimonials">
           <div class="container">
             <header>
-              <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+              <h2 class="title">Opinião de Nossos Clientes.</h2>
             </header>
             <div class="testimonials swiper">
               <div class="swiper-wrapper">
@@ -198,7 +230,7 @@
                         src="https://randomuser.me/api/portraits/women/28.jpg"
                         alt="Foto de Tamara"
                       />
-                      Tamara Curvelo
+                      Margot Ro
                     </cite>
                   </blockquote>
                 </div>
@@ -217,7 +249,7 @@
                         src="https://randomuser.me/api/portraits/women/2.jpg"
                         alt="Foto de Roberta"
                       />
-                      Roberta Brito
+                      Renata Pereira
                     </cite>
                   </blockquote>
                 </div>
@@ -231,7 +263,7 @@
         <section class="section" id="contact">
           <div class="container grid">
             <div class="text">
-              <h2 class="title">Entre em contato com a gente</h2>
+              <h2 class="title">Entre em contato</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
                 quo minima culpa obcaecati soluta quis amet quae veritatis quam,
@@ -248,6 +280,10 @@
 
             <div class="links">
               <ul class="grid">
+                <li>
+                  <i class="icon-instagram"></i>
+                  @italo
+                </li>
                 <li><i class="icon-phone"></i> 51531531</li>
                 <li><i class="icon-map-pin"></i>Rua Tal</li>
                 <li>
@@ -269,6 +305,9 @@
       </div>
 
       <footer class="section">
+        <div class="container grid">
+          <h2 class="title">Nossos parceiros</h2>
+        </div>
         <div class="container grid">
           <div class="brand">
             <a class="logo logo-alt" href="#"

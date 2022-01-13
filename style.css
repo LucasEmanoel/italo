@@ -76,7 +76,7 @@ body {
   padding: 0 2rem;
   border-radius: 0.25rem;
   font: 500 1rem var(--body-font);
-  transition: background 0.3s;
+  transition: background 0.4s;
 }
 .button:hover {
   background: var(--base-color-alt);
@@ -358,8 +358,21 @@ nav.show div.icon-close {
   margin: 1rem 0;
 }
 
-.cards.grid {
+#services .cards.grid {
   gap: 1.5rem;
+}
+#services .card.emphasis {
+}
+#services .card:hover {
+  border-bottom: 0.3rem solid #ffffff;
+}
+
+#services .card:hover,
+#services .card i:hover,
+#services .card .title:hover,
+#services .card p:hover {
+  background-color: var(--base-color-alt);
+  color: black;
 }
 
 .card {
@@ -369,6 +382,11 @@ nav.show div.icon-close {
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
   background: white;
+  transition: transform 0.5s !important;
+}
+
+.card:hover {
+  transform: scale(1.03) !important;
 }
 
 .card.home-card {
@@ -381,10 +399,13 @@ nav.show div.icon-close {
   font-size: 5rem;
   color: var(--base-color);
 }
+.card i img {
+  width: 6rem;
+}
 
 .card .title {
   font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 2rem;
 }
 /*================TESTIMONIALS================*/
 
@@ -401,6 +422,7 @@ nav.show div.icon-close {
   padding: 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-radius: 0.25rem;
+  background: white;
 }
 #testimonials blockquote p {
   position: relative;
@@ -545,6 +567,7 @@ footer .social a:hover {
   visibility: hidden;
   opacity: 0;
 }
+/* SEVICES PAGE */
 
 /*Responsivo*/
 /*EXTRA LARGE DEVICES: 1200 >*/
