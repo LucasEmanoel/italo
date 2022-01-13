@@ -266,8 +266,14 @@ nav.show div.icon-close {
 
 /*================HOME================*/
 #home {
+  background-image: url('./images/pictures2.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   overflow: hidden;
 }
+#home::after {
+}
+
 #home .container {
   margin: 0;
 }
@@ -276,7 +282,7 @@ nav.show div.icon-close {
   order: 0;
   position: relative;
 }
-
+/* 
 #home .image::before {
   content: '';
   height: 100%;
@@ -286,7 +292,7 @@ nav.show div.icon-close {
   top: -16.8%;
   left: -16.7%;
   z-index: 0;
-}
+} */
 
 #home .image img {
   position: relative;
