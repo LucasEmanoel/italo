@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ìtalo Azevedo - Engenheiro Civil</title>
+    <title>Italo Azevedo - Engenheiro Civil</title>
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
     <!-- ICONS 1:13 min aula - 002-->
     <link rel="stylesheet" href="assets/icons/style.css" />
@@ -28,22 +28,111 @@
   <body>
     <!-- Modal Orçamento -->
     <div class="modal-wrapper">
-      <div class="modal swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <form action="">
-              <div>
-                <input type="checkbox" name="" id="" />
-                <label for=""></label>
+      <div class="modal">
+        <div class="close-button"><img src="/images/close.png" alt="" /></div>
+        <h2 class="title">Marque as opções</h2>
+
+        <div id="form-message" class="swiper swiper-msg">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="modal-title"><h1>Serviços</h1></div>
+              <div class="divider-1"></div>
+              <div class="input-container">
+                <input
+                  type="checkbox"
+                  name="Avaliação de Imóveis"
+                  id="avaliacao"
+                  value="Avaliação de Imóveis"
+                />
+                <label for="avaliacao">Avaliação de Imóveis</label>
               </div>
-              <div>
-                <input type="checkbox" name="" id="" />
-                <label for=""></label>
+              <div class="input-container">
+                <input
+                  type="checkbox"
+                  name="Acompanhamento de Obra"
+                  id="acompanhamento"
+                  value="Acompanhamento de Obra"
+                />
+                <label for="acompanhamento">Acompanhamento de Obra</label>
               </div>
-              <div>
-                <button type="submit">Solicitar</button>
+              <div class="input-container">
+                <input
+                  type="checkbox"
+                  name="Elaboração de Projeto"
+                  value="Elaboração de Projeto"
+                  id="elaboração"
+                />
+                <label for="elaboração">Elaboração de Projeto</label>
               </div>
-            </form>
+              <div class="input-container">
+                <input
+                  type="checkbox"
+                  name="Regularização"
+                  value="Regularização"
+                  id="regularizacao"
+                />
+                <label for="regularizacao">Regularização</label>
+              </div>
+              <div class="input-container">
+                <input
+                  type="checkbox"
+                  name="Orçamento"
+                  id="orcamento"
+                  value="Orçamento"
+                />
+                <label for="orcamento">Orçamento</label>
+              </div>
+              <div class="input-container">
+                <input
+                  type="checkbox"
+                  name="Consultoria"
+                  id="consultoria"
+                  value="Consultoria"
+                />
+                <label for="consultoria">Consultoria</label>
+              </div>
+              <div class="input-container">
+                <input
+                  type="checkbox"
+                  name="Vistoria"
+                  id="vistoria"
+                  value="Vistoria"
+                />
+                <label for="vistoria">Vistoria</label>
+              </div>
+              <div class="divider-2"></div>
+              <div class="modal-container-button">
+                <button class="button button-next">Próximo ></button>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="modal-title"><h1>Area do Imovel</h1></div>
+              <div class="divider-1"></div>
+              <div class="input-container area">
+                <label for="comprimento">Comprimento: </label>
+                <input
+                  type="text"
+                  name="comprimento"
+                  id="comprimento"
+                  placeholder="Digite o Comprimento..."
+                />
+              </div>
+              <div class="input-container area">
+                <label for="largura">Largura: </label>
+                <input
+                  type="text"
+                  name="largura"
+                  id="largura"
+                  placeholder="Digite a Largura..."
+                />
+              </div>
+              <div class="divider-2"></div>
+              <div class="modal-container-button">
+                <button class="button button-prev">< Voltar</button>
+                <button class="button button-send">Enviar ></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -55,9 +144,14 @@
     <div class="content">
       <header id="header" class="scroll">
         <nav class="container">
-          <a class="logo" href="#"
-            ><img src="images/logo.png" alt="logo do header" srcset=""
-          /></a>
+          <a class="logo" href="#">
+            <img src="images/logo.png" alt="logo do header" srcset="" />
+            <div></div>
+            <p>
+              Ítalo <br />
+              Azevedo
+            </p>
+          </a>
           <!--Menu-->
           <div class="menu">
             <ul class="grid">
@@ -65,6 +159,7 @@
               <li><a class="title" href="#about">Sobre</a></li>
               <li><a class="title" href="#services">Serviços</a></li>
               <li><a class="title" href="#testimonials">Depoimentos</a></li>
+              <li><a class="title" href="#partners">Parceiros</a></li>
               <li><a class="title" href="#contact">Contato</a></li>
             </ul>
           </div>
@@ -81,13 +176,18 @@
               <img src="images/img4.jpeg" alt="gamer" />
             </div>
             <div class="text card home-card">
-              <h2 class="title">O projeto da sua casa, a um clique!</h2>
+              <h2 class="title">O Projeto da Sua Casa, a um Clique!</h2>
               <p>
                 Um dos melhores profissionais do agreste, especializado em
                 renderização 3D.
               </p>
 
-              <a class="button" href="">Fazer Orçamento</a>
+              <a class="button animated" href="#" id="orcamento"
+                >Fazer Orçamento</a
+              >
+              <div class="card-footer">
+                <img src="/images/wave.svg" alt="" srcset="" />
+              </div>
             </div>
           </div>
         </section>
@@ -95,28 +195,56 @@
         <!--About-->
         <section class="section" id="about">
           <div class="container grid">
-            <div class="image">
-              <img src="images/img3.jpeg" alt="italo engenheiro" />
+            <div class="image swiper swiper-about">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="container-text">
+                    <img src="images/img3.jpeg" alt="italo engenheiro" />
+                    <div class="professional-data">
+                      <h1>Ítalo Azevedo</h1>
+                      <p>Engenheiro Civil</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/img1.jpeg" alt="italo engenheiro" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/img2.jpeg" alt="italo engenheiro" />
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
             </div>
             <div class="text">
               <h2 class="title"></h2>
               <p>
-                Olá, meu nome ítalo azevedo, sou engenheiro formado pela
-                AESGA(Autarquia do Ensino Superior de Garanhuns), .
+                Somos uma empresa que atua do seguimento da construção civil,
+                focada no desenvolvimento de soluções, realizações de projetos e
+                construção de sonhos, nos empenhamos para prestar um ótimo
+                atendimento aos clientes e a enorme qualidade dos serviços.
               </p>
               <br />
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Numquam accusamus nobis libero, temporibus laborum ipsa eum
-                dolorum incidunt illo labore magnam corrupti est ipsum sunt
-                voluptates iure laboriosam placeat culpa?
+                Nossa equipe é focada na área da Construção Civil e no
+                desenvolvimento de Projetos, contamos com profissionais
+                capacitados e bem treinados, trazendo segurança e confiabilidade
+                para suas obras. Desde a especificação de seus projetos, até os
+                ajustes finais, integramos isso a sua realização, possuímos
+                experiência, técnica e prática em todas as etapas necessárias
+                para o desenvolvimento de grandes obras, atendendo as suas
+                necessidades, seja ela pequena, média ou grande, comercial,
+                reidencial, industrial ou empreendimentos imobiliários.
               </p>
               <br />
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Maiores alias laboriosam necessitatibus itaque, architecto nobis
-                ad odio ea possimus nesciunt consectetur quisquam qui aliquid
-                excepturi velit ut quia minus rem.
+                Nossos funcionários e colaboradores tem grande vinculo com as
+                metas e os padrões da empresa, Ítalo Azevedo está sempre
+                investindo em capacitação, inovação e tecnologia afins de
+                alcançar os melhores resultados possíveis para seu
+                empreendimento, nosso maior objetivo sempre será tirar seu sonho
+                do papel.
               </p>
             </div>
           </div>
@@ -128,61 +256,63 @@
             <header>
               <h2 class="title">Serviços</h2>
               <p class="subtitle">
-                Com uma vasta experiencia de mercado,
                 <strong> Ítalo Azevedo </strong> ao longo dos ultimos anos,
                 conta com um portifolio rico de atividades aplicadas ao setor de
-                engenharia pública e privada,<strong>
-                  clique e acesse todos serviços abaixo.</strong
-                >
+                engenharia pública e privada.
               </p>
-              <a class="button" href="/servicos.html"> Todos serviços</a>
             </header>
-            <div class="cards grid">
-              <div class="card">
-                <i>
-                  <img
-                    src="/images/sketch.png"
-                    alt="Elaboração de projetos"
-                    srcset=""
-                /></i>
-                <h3 class="title">Elaboração de Projetos</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Obcaecati unde cumque quidem reprehenderit earum magnam odio
-                  illo itaque repudiandae neque ut velit veritatis harum eos
-                  alias qui, illum nesciunt adipisci!
-                </p>
+            <div class="container-services">
+              <div class="cards grid">
+                <div class="card">
+                  <i>
+                    <img
+                      src="/images/sketch.png"
+                      alt="Elaboração de projetos"
+                      srcset=""
+                  /></i>
+                  <h3 class="title">Elaboração de Projetos</h3>
+                  <p>
+                    Simplificamos os trabalhos e etapas a serem cumpridas,
+                    desenvolvendo uma imagem do que se quer alcançar,
+                    identificando as principais deficiências e a apontar
+                    possíveis falhas durante a execução das atividades
+                    previstas.
+                  </p>
+                </div>
+                <div class="card emphasis">
+                  <i>
+                    <img
+                      src="/images/file.png"
+                      alt="Regularização de imoveis"
+                      srcset=""
+                  /></i>
+                  <h3 class="title">Regularização de Imóveis</h3>
+                  <p>
+                    Garantirmos a legalidade da posse ao atual detentor da
+                    propriedade, atualizando a escritura e transferindo o bem de
+                    forma legal para o proprietário.
+                  </p>
+                </div>
+                <div class="card">
+                  <i>
+                    <img
+                      src="/images/engrenagem.png"
+                      alt="Acompanhamento de obras"
+                      srcset=""
+                  /></i>
+                  <h3 class="title">Acompanhamento de Obras</h3>
+                  <p>
+                    Asseguramos que todo o planejamento seja seguido à risca,
+                    uma forma eficiente de evitar que aconteçam perdas e
+                    deteriorações desnecessárias, garantindo eficiência e
+                    economia.
+                  </p>
+                </div>
               </div>
-              <div class="card emphasis">
-                <i>
-                  <img
-                    src="/images/file.png"
-                    alt="Regularização de imoveis"
-                    srcset=""
-                /></i>
-                <h3 class="title">Regularização de Imóveis</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Provident quia architecto debitis temporibus. Voluptates iusto
-                  saepe optio aperiam, tenetur quaerat quas cupiditate corrupti
-                  ab quod eaque, nulla ad in animi.
-                </p>
-              </div>
-              <div class="card">
-                <i>
-                  <img
-                    src="/images/engrenagem.png"
-                    alt="Acompanhamento de obras"
-                    srcset=""
-                /></i>
-                <h3 class="title">Acompanhamento de Obras</h3>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Cupiditate excepturi cum eveniet nulla aliquid architecto
-                  tempore, veritatis porro eum? Dolorem animi cupiditate
-                  distinctio, officiis dolores ea nemo repudiandae ullam
-                  exercitationem!
-                </p>
+              <div class="container-button">
+                <a class="button animated" href="/servicos.html">
+                  Veja Todos Serviços</a
+                >
               </div>
             </div>
           </div>
@@ -194,7 +324,7 @@
             <header>
               <h2 class="title">Opinião de Nossos Clientes.</h2>
             </header>
-            <div class="testimonials swiper">
+            <div class="testimonials swiper swiper-testimonials">
               <div class="swiper-wrapper">
                 <div class="testimonial swiper-slide">
                   <blockquote>
@@ -259,22 +389,43 @@
           </div>
         </section>
         <div class="divider-2"></div>
+        <section class="section" id="partners">
+          <div class="container grid">
+            <h2 class="title">Nossos Parceiros</h2>
+            <div class="container-partners">
+              <div class="card-partners card">
+                <img src="/images/san-vidros.jpeg" alt="San Vidros" srcset="" />
+                <h2>San Vidros</h2>
+                <p>Confecção e Instalação de Portas, Portões e Vidraças</p>
+              </div>
+              <div class="card-partners card">
+                <img src="/images/san-vidros.jpeg" alt="San Vidros" srcset="" />
+                <h2>San Vidros</h2>
+                <p>Confecção e Instalação de Portas, Portões e Vidraças</p>
+              </div>
+              <div class="card-partners card">
+                <img src="/images/san-vidros.jpeg" alt="San Vidros" srcset="" />
+                <h2>San Vidros</h2>
+                <p>Confecção e Instalação de Portas, Portões e Vidraças</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="divider-1"></div>
         <!--CONTATOS-->
         <section class="section" id="contact">
           <div class="container grid">
             <div class="text">
-              <h2 class="title">Entre em contato</h2>
+              <h2 class="title">Entre em Contato</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
-                quo minima culpa obcaecati soluta quis amet quae veritatis quam,
-                ut ullam non adipisci fuga iusto consequatur? Minus doloremque
-                autem voluptates?
+                Entre em contato diretamente com nossa equipe e descubra como
+                funciona de forma detalhada nossos serviços, não perca tempo.
               </p>
               <a
-                href="https://api.whatsapp.com/send?phone=+55087981319428&text=Oi! Gostaria de te amar"
+                href="https://api.whatsapp.com/send?phone=+55087981319428&text=Oi!"
                 class="button"
                 target="_blank"
-                ><i class="icon-whatsapp"></i> Entrar em contato</a
+                ><i class="icon-whatsapp"></i> Entrar em Contato</a
               >
             </div>
 
@@ -282,32 +433,25 @@
               <ul class="grid">
                 <li>
                   <i class="icon-instagram"></i>
-                  @italo
+                  @eng.italoazevedo
                 </li>
-                <li><i class="icon-phone"></i> 51531531</li>
-                <li><i class="icon-map-pin"></i>Rua Tal</li>
+                <li><i class="icon-phone"></i> +55 (87) 98105-3280</li>
+                <li>
+                  <i class="icon-map-pin"></i> R. Mal Rondon, Terezinha - PE
+                </li>
                 <li>
                   <i class="icon-mail"></i>
-                  dsadsa@dsadsa.com
+                  eng.italoazevedo@gmail.com
                 </li>
               </ul>
             </div>
           </div>
         </section>
-        <div class="divider-1"></div>
+
+        <div class="divider-2"></div>
       </main>
 
-      <div class="modal-wrapper">
-        <div class="modal">
-          teste
-          <form action="#"></form>
-        </div>
-      </div>
-
       <footer class="section">
-        <div class="container grid">
-          <h2 class="title">Nossos parceiros</h2>
-        </div>
         <div class="container grid">
           <div class="brand">
             <a class="logo logo-alt" href="#"
@@ -331,6 +475,12 @@
           </div>
         </div>
       </footer>
+      <a
+        class="sr-only"
+        href="https://www.flaticon.com/free-icons/close"
+        title="close icons"
+        >Close icons created by ariefstudio - Flaticon</a
+      >
     </div>
     <!-- <a href="#home" class="back-to-top">
       <i class="icon-arrow-up"></i>

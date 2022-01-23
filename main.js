@@ -1,3 +1,43 @@
+/*Message Orçamento */
+let orcamento = 'Olá Ítalo Azevedo, Tenho interesse nos seguintes serviços:\n\n'
+let services = []
+let areas = []
+const inputsCheckbox = document.querySelectorAll(
+  '.modal input[type="checkbox"]'
+)
+const inputsText = document.querySelectorAll('.modal input[type="text"]')
+
+inputsCheckbox.forEach(function (checkbox) {
+  checkbox.addEventListener('change', function () {
+    services = enabledSettings = Array.from(inputsCheckbox) // Convert checkboxes to an array to use filter and map.
+      .filter(i => i.checked) // Use Array.filter to remove unchecked checkboxes.
+      .map(i => i.value) // Use Array.map to extract only the checkbox values from the array of objects.
+  })
+})
+inputsText.forEach(function (input) {
+  input.addEventListener('change', function () {
+    areas = enabledSettings = Array.from(inputsText) // Convert checkboxes to an array to use filter and map.
+  })
+})
+
+function BuildMessage() {
+  services.forEach(element => {
+    orcamento += `${element}\n`
+  })
+  orcamento += '\nTenho um imóvel com \n'
+  areas.forEach(area => {
+    orcamento += `${area.value} metros de ${area.name} `
+  })
+  texto = window.encodeURIComponent(orcamento)
+  window.open(
+    `https://api.whatsapp.com/send?phone=+55087981053280&text=${texto}`
+  )
+}
+document
+  .querySelector('#form-message .button-send')
+  .addEventListener('click', BuildMessage)
+// document.querySelector('#form-message').addEventListener('change', BuildMessage)
+
 /* abre e fehca menu quando clicar*/
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
@@ -9,6 +49,19 @@ for (const element of toggle) {
   })
 }
 
+/*abrir modal */
+const modal = document.querySelector('.modal-wrapper')
+const buttonModal = document.querySelector('#home #orcamento')
+buttonModal.addEventListener('click', function () {
+  modal.classList.add('show')
+})
+/*fechar modal */
+const closeButton = document.querySelector(
+  '.modal-wrapper .modal .close-button'
+)
+closeButton.addEventListener('click', function () {
+  modal.classList.remove('show')
+})
 /* quando clicar em um item do menu, esconder menu*/
 
 const links = document.querySelectorAll('nav ul li a')
@@ -32,7 +85,26 @@ function changeHeaderWhenScroll() {
 }
 
 /** TESTIMONIALS CARROSEL SWIPER */
-const swiper = new Swiper('.swiper', {
+const swiper1 = new Swiper('.swiper-about', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  mousewheel: true,
+  keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 1,
+      setWrapperSize: true
+    }
+  }
+})
+
+const swiper2 = new Swiper('.swiper-testimonials', {
   slidesPerView: 1,
   pagination: {
     el: '.swiper-pagination'
@@ -46,12 +118,22 @@ const swiper = new Swiper('.swiper', {
     }
   }
 })
+const swiper3 = new Swiper('.swiper-msg', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev'
+  }
+})
 
 /** SCROLLREVEAL MOSTRAR ELEMENTOS NO SCROL */
 const scrollReveal = ScrollReveal({
   origin: 'top',
-  distance: '30px',
-  duration: 700,
+  distance: '10px',
+  duration: 800,
   reset: true
 })
 
@@ -67,7 +149,7 @@ scrollReveal.reveal(
   #contact .text,
   #contact .links,
   footer .brand, footer .social`,
-  { interval: 100 }
+  { interval: 150 }
 )
 
 /**Voltar para o topo */
