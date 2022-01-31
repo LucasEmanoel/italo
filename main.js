@@ -1,5 +1,5 @@
 /*Message Orçamento */
-let orcamento = 'Olá Ítalo Azevedo, Tenho interesse nos seguintes serviços:\n\n'
+let orcamento = 'Olá, Tenho interesse nos seguintes serviços:\n\n'
 let services = []
 let areas = []
 const inputsCheckbox = document.querySelectorAll(
@@ -26,7 +26,7 @@ function BuildMessage() {
   })
   orcamento += '\nTenho um imóvel com \n'
   areas.forEach(area => {
-    orcamento += `${area.value} metros de ${area.name} `
+    orcamento += `${area.value} metros de ${area.name} \n`
   })
   texto = window.encodeURIComponent(orcamento)
   window.open(

@@ -11,6 +11,16 @@ ul {
 a {
   text-decoration: none;
 }
+/* link que foi visitado */
+
+/* quando o ponteiro do mouse passa no link */
+a:hover {
+  color: #999;
+}
+/* quando o link for selecionado */
+a:active {
+  color: #333;
+}
 
 img {
   width: 100%;
@@ -44,7 +54,7 @@ img {
   /* colors */
   --hue: 214;
   /* HSL color mode */
-  --base-color: hsl(var(--hue) 67% 45%);
+  --base-color: hsl(207deg 100% 22%);
   --base-color-second: hsl(var(--hue) 65% 88%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
@@ -378,6 +388,9 @@ nav.show div.icon-close {
   position: relative;
   width: 100%;
 }
+#about .image img {
+  height: 35rem;
+}
 #about .swiper .swiper-button-next,
 #about .swiper .swiper-button-prev {
   padding: 0 1.5rem;
@@ -574,7 +587,8 @@ nav.show div.icon-close {
   font-family: 'Poppins', sans-serif;
   margin-bottom: 1rem;
 }
-#partners .container .card p {
+#partners .container .card span {
+  color: #333;
   text-align: center;
 }
 #partners .container img {
@@ -590,6 +604,7 @@ nav.show div.icon-close {
 #partners .container .card-partners {
   display: flex;
   flex-direction: column;
+  height: 30rem;
   align-items: center;
 }
 /*================FOOTER================*/
@@ -597,7 +612,7 @@ nav.show div.icon-close {
 footer {
   background: var(--base-color);
 }
-footer.section {
+footer.section-footer {
   padding: 4rem 0;
 }
 footer .logo {
@@ -711,20 +726,28 @@ footer .social a:hover {
   font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
 }
+.modal-wrapper .modal #form-message .swiper-slide .input-container.area label {
+  font-size: 14px;
+}
+
 .modal-wrapper
   .modal
   #form-message
   .swiper-slide
-  .input-container
+  .input-container.area
   input[type='text'] {
   height: 2rem;
   border-radius: 0.25rem;
-  border: 1px solid gray;
+  border: none;
   padding: 0 1rem;
+  outline: none;
 }
 
 .modal-wrapper .modal #form-message .swiper-slide .input-container.area {
   flex-direction: column;
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .modal-wrapper .modal #form-message .modal-container-button {
