@@ -389,7 +389,7 @@ nav.show div.icon-close {
   width: 100%;
 }
 #about .image img {
-  height: 35rem;
+  height: auto;
 }
 #about .swiper .swiper-button-next,
 #about .swiper .swiper-button-prev {
@@ -582,12 +582,12 @@ nav.show div.icon-close {
   text-align: center;
 }
 #partners .container .card h2 {
-  margin-top: 2rem;
   color: var(--base-color);
   font-family: 'Poppins', sans-serif;
   margin-bottom: 1rem;
 }
 #partners .container .card span {
+  margin-bottom: 1rem;
   color: #333;
   text-align: center;
 }
