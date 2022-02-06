@@ -109,7 +109,10 @@ const swiper2 = new Swiper('.swiper-testimonials', {
   pagination: {
     el: '.swiper-pagination'
   },
-  mousewheel: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
   keyboard: true,
   breakpoints: {
     767: {
@@ -153,14 +156,14 @@ scrollReveal.reveal(
 )
 
 /**Voltar para o topo */
-// const backToTopButton = document.querySelector('.back-to-top ')
-// function backToTop() {
-//   if (this.window.scrollY >= 560) {
-//     backToTopButton.classList.add('show')
-//   } else {
-//     backToTopButton.classList.remove('show')
-//   }
-// }
+const backToTopButton = document.querySelector('.back-to-top ')
+function backToTop() {
+  if (this.window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
 
 /**Menu Ativo Conforme Section no View */
 const sections = document.querySelectorAll('main section[id]')
@@ -191,6 +194,6 @@ function activateMenuAtCurrentSection() {
 /**When Scroll */
 window.addEventListener('scroll', function () {
   changeHeaderWhenScroll()
-  //backToTop()
+  backToTop()
   activateMenuAtCurrentSection()
 })

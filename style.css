@@ -37,14 +37,24 @@ img {
   white-space: nowrap;
   border-width: 0;
 }
-.fundo img {
+
+.fundo {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
-  z-index: -1;
-  opacity: 0.05;
-  top: -1rem;
-  left: -5rem;
-  /* height: 200vh; */
-  width: 200vw;
+  justify-content: center;
+  align-items: center;
+  z-index: -1000;
+}
+
+.fundo img {
+  opacity: 0.1;
+
+  z-index: -1000;
+  height: 100vh;
+  width: 250vw;
+  padding-left: 9rem;
 }
 
 /*================VARIABLES================*/
@@ -505,16 +515,29 @@ nav.show div.icon-close {
   margin-left: 0;
   margin-right: 0;
 }
+#testimonials .swiper .swiper-button-next {
+  right: -0.2rem;
+}
+#testimonials .swiper .swiper-button-prev {
+  left: -0.2rem;
+}
+
 #testimonials header {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 0;
 }
+
 #testimonials blockquote {
   padding: 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-radius: 0.25rem;
   background: white;
+  min-height: 17rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 #testimonials blockquote p {
   position: relative;
@@ -534,6 +557,8 @@ nav.show div.icon-close {
   display: flex;
   align-items: center;
   font-style: normal;
+  position: absolute;
+  bottom: 1.3rem;
 }
 
 #testimonials cite img {
@@ -578,9 +603,17 @@ nav.show div.icon-close {
 #contact ul li i {
   color: var(--base-color);
 }
+
 #partners .container .title {
   text-align: center;
 }
+#partners .container .card {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  z-index: 1000;
+}
+
 #partners .container .card h2 {
   color: var(--base-color);
   font-family: 'Poppins', sans-serif;
@@ -642,12 +675,12 @@ footer .social a:hover {
 }
 /*================BACK-TO-TOP================*/
 
-/* .back-to-top {
+.back-to-top {
   background: var(--base-color);
   color: var(--text-color-light);
 
   position: fixed;
-  right: 1rem;
+  left: 1rem;
   bottom: 1rem;
 
   padding: 0.5rem;
@@ -661,13 +694,13 @@ footer .social a:hover {
 
   transition: 0.3s;
   transform: translateY(100%);
-} */
+}
 
-/* .back-to-top.show {
+.back-to-top.show {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
-} */
+}
 /* MODAL */
 /*================Modal Msg================*/
 
@@ -778,22 +811,17 @@ footer .social a:hover {
 /*Responsivo*/
 /*EXTRA LARGE DEVICES: 1200 >*/
 @media (min-width: 992px) {
+  .fundo img {
+    height: 100rem;
+    width: 100rem;
+  }
   #home {
     background-image: url('./images/pictures2.jpg');
     background-repeat: no-repeat;
     background-size: 100% auto;
     overflow: hidden;
   }
-  .fundo img {
-    position: fixed;
 
-    z-index: -1;
-    opacity: 0.05;
-
-    top: -50rem;
-    height: 150rem;
-    width: 140rem;
-  }
   .container {
     max-width: 1120px;
     margin-left: auto;
